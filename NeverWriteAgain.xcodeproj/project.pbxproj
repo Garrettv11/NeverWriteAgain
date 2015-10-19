@@ -17,6 +17,8 @@
 		612136141BD4417F00DCE206 /* NeverWriteAgainUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 612136131BD4417F00DCE206 /* NeverWriteAgainUITests.m */; };
 		612136241BD446FD00DCE206 /* NWKeyboardMoveTextViewController.h.m in Sources */ = {isa = PBXBuildFile; fileRef = 612136231BD446FD00DCE206 /* NWKeyboardMoveTextViewController.h.m */; settings = {ASSET_TAGS = (); }; };
 		612136281BD448BC00DCE206 /* NWLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 612136271BD448BC00DCE206 /* NWLesson.m */; settings = {ASSET_TAGS = (); }; };
+		619105971BD4A0A000A3A095 /* NWMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 619105951BD4A0A000A3A095 /* NWMenuTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		619105981BD4A0A000A3A095 /* NWMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619105961BD4A0A000A3A095 /* NWMenuTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,9 @@
 		612136231BD446FD00DCE206 /* NWKeyboardMoveTextViewController.h.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWKeyboardMoveTextViewController.h.m; sourceTree = "<group>"; };
 		612136261BD448BC00DCE206 /* NWLesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWLesson.h; sourceTree = "<group>"; };
 		612136271BD448BC00DCE206 /* NWLesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWLesson.m; sourceTree = "<group>"; };
+		619105941BD4A0A000A3A095 /* NWMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWMenuTableViewCell.h; sourceTree = "<group>"; };
+		619105951BD4A0A000A3A095 /* NWMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWMenuTableViewCell.m; sourceTree = "<group>"; };
+		619105961BD4A0A000A3A095 /* NWMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWMenuTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +124,9 @@
 				612135EE1BD4417F00DCE206 /* Supporting Files */,
 				612136261BD448BC00DCE206 /* NWLesson.h */,
 				612136271BD448BC00DCE206 /* NWLesson.m */,
+				619105941BD4A0A000A3A095 /* NWMenuTableViewCell.h */,
+				619105951BD4A0A000A3A095 /* NWMenuTableViewCell.m */,
+				619105961BD4A0A000A3A095 /* NWMenuTableViewCell.xib */,
 			);
 			path = NeverWriteAgain;
 			sourceTree = "<group>";
@@ -262,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				612135FE1BD4417F00DCE206 /* LaunchScreen.storyboard in Resources */,
+				619105981BD4A0A000A3A095 /* NWMenuTableViewCell.xib in Resources */,
 				612135FB1BD4417F00DCE206 /* Assets.xcassets in Resources */,
 				612135F91BD4417F00DCE206 /* Main.storyboard in Resources */,
 			);
@@ -293,6 +302,7 @@
 				612136281BD448BC00DCE206 /* NWLesson.m in Sources */,
 				612135F31BD4417F00DCE206 /* NWAppDelegate.m in Sources */,
 				612135F01BD4417F00DCE206 /* main.m in Sources */,
+				619105971BD4A0A000A3A095 /* NWMenuTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +528,7 @@
 				6121361A1BD4417F00DCE206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6121361B1BD4417F00DCE206 /* Build configuration list for PBXNativeTarget "NeverWriteAgainTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +537,7 @@
 				6121361D1BD4417F00DCE206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6121361E1BD4417F00DCE206 /* Build configuration list for PBXNativeTarget "NeverWriteAgainUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +546,7 @@
 				612136201BD4417F00DCE206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
