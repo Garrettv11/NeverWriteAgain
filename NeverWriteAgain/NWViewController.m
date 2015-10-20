@@ -68,11 +68,12 @@ const NSString * NWTableViewCellKey = @"NWTableViewCellKey";
 {
     //
     [mFilteredLessonArray removeAllObjects];
-    //getName is actually the method of lesson just like [lesson getName]
     if (searchText == nil || searchText.length == 0) {
         [mFilteredLessonArray addObjectsFromArray:mLessonArray];
     } else {
+        //getName is actually the method of lesson just like [lesson getName]
         NSString *queryString = [NSString stringWithFormat:@"getName contains[c] '%@'", searchText];
+        //a predicate is like a query
         NSPredicate *filterPredicate = [NSPredicate predicateWithFormat:queryString];
         [mFilteredLessonArray removeAllObjects];
         [mFilteredLessonArray addObjectsFromArray:[mLessonArray filteredArrayUsingPredicate:filterPredicate]];

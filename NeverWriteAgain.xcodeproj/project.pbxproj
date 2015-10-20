@@ -112,6 +112,8 @@
 		612135ED1BD4417F00DCE206 /* NeverWriteAgain */ = {
 			isa = PBXGroup;
 			children = (
+				6191059A1BD61B3900A3A095 /* Delegates */,
+				619105991BD61A0F00A3A095 /* Font Resize To Fit View */,
 				612136251BD4470600DCE206 /* Keyboard */,
 				612135F11BD4417F00DCE206 /* NWAppDelegate.h */,
 				612135F21BD4417F00DCE206 /* NWAppDelegate.m */,
@@ -164,6 +166,20 @@
 				612136231BD446FD00DCE206 /* NWKeyboardMoveTextViewController.m */,
 			);
 			name = Keyboard;
+			sourceTree = "<group>";
+		};
+		619105991BD61A0F00A3A095 /* Font Resize To Fit View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Font Resize To Fit View";
+			sourceTree = "<group>";
+		};
+		6191059A1BD61B3900A3A095 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
