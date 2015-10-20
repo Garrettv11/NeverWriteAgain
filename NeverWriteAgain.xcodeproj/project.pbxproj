@@ -15,7 +15,7 @@
 		612135FE1BD4417F00DCE206 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 612135FC1BD4417F00DCE206 /* LaunchScreen.storyboard */; };
 		612136091BD4417F00DCE206 /* NeverWriteAgainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 612136081BD4417F00DCE206 /* NeverWriteAgainTests.m */; };
 		612136141BD4417F00DCE206 /* NeverWriteAgainUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 612136131BD4417F00DCE206 /* NeverWriteAgainUITests.m */; };
-		612136241BD446FD00DCE206 /* NWKeyboardMoveTextViewController.h.m in Sources */ = {isa = PBXBuildFile; fileRef = 612136231BD446FD00DCE206 /* NWKeyboardMoveTextViewController.h.m */; settings = {ASSET_TAGS = (); }; };
+		612136241BD446FD00DCE206 /* NWKeyboardMoveTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612136231BD446FD00DCE206 /* NWKeyboardMoveTextViewController.m */; settings = {ASSET_TAGS = (); }; };
 		612136281BD448BC00DCE206 /* NWLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 612136271BD448BC00DCE206 /* NWLesson.m */; settings = {ASSET_TAGS = (); }; };
 		619105971BD4A0A000A3A095 /* NWMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 619105951BD4A0A000A3A095 /* NWMenuTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		619105981BD4A0A000A3A095 /* NWMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619105961BD4A0A000A3A095 /* NWMenuTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -56,7 +56,7 @@
 		612136131BD4417F00DCE206 /* NeverWriteAgainUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeverWriteAgainUITests.m; sourceTree = "<group>"; };
 		612136151BD4417F00DCE206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		612136221BD446FD00DCE206 /* NWKeyboardMoveTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWKeyboardMoveTextViewController.h; sourceTree = "<group>"; };
-		612136231BD446FD00DCE206 /* NWKeyboardMoveTextViewController.h.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWKeyboardMoveTextViewController.h.m; sourceTree = "<group>"; };
+		612136231BD446FD00DCE206 /* NWKeyboardMoveTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWKeyboardMoveTextViewController.m; sourceTree = "<group>"; };
 		612136261BD448BC00DCE206 /* NWLesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWLesson.h; sourceTree = "<group>"; };
 		612136271BD448BC00DCE206 /* NWLesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWLesson.m; sourceTree = "<group>"; };
 		619105941BD4A0A000A3A095 /* NWMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWMenuTableViewCell.h; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				612136221BD446FD00DCE206 /* NWKeyboardMoveTextViewController.h */,
-				612136231BD446FD00DCE206 /* NWKeyboardMoveTextViewController.h.m */,
+				612136231BD446FD00DCE206 /* NWKeyboardMoveTextViewController.m */,
 			);
 			name = Keyboard;
 			sourceTree = "<group>";
@@ -297,7 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				612136241BD446FD00DCE206 /* NWKeyboardMoveTextViewController.h.m in Sources */,
+				612136241BD446FD00DCE206 /* NWKeyboardMoveTextViewController.m in Sources */,
 				612135F61BD4417F00DCE206 /* NWViewController.m in Sources */,
 				612136281BD448BC00DCE206 /* NWLesson.m in Sources */,
 				612135F31BD4417F00DCE206 /* NWAppDelegate.m in Sources */,

@@ -12,12 +12,16 @@
 
 const NSString * NWTableViewCellKey = @"NWTableViewCellKey";
 
-@interface NWViewController ()
+@interface NWViewController ()<UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet
 
+    UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @end
 
 @implementation NWViewController {
     NSMutableArray * mLessonArray;
+    NSMutableArray * mFilteredLessonArray;
 }
 
 - (void)viewDidLoad {
@@ -25,8 +29,10 @@ const NSString * NWTableViewCellKey = @"NWTableViewCellKey";
 
     //make sure we initialize our lesson array
     mLessonArray = [[NSMutableArray alloc]init];
-    [self.tableView registerNib:[UINib nibWithNibName:@"NWMenuTableViewCell" bundle:nil] forCellReuseIdentifier:NWTableViewCellKey];
+    //initialize our filtered array
+    mFilteredLessonArray = [[NSMutableArray alloc]init];
     
+    [self.tableView registerNib:[UINib nibWithNibName:@"NWMenuTableViewCell" bundle:nil] forCellReuseIdentifier:NWTableViewCellKey];
     //make sure that we are our own data and interaction delegate
     //make sure the table view tells this view controller when things happen
     [self.tableView setDelegate:self];
@@ -39,16 +45,42 @@ const NSString * NWTableViewCellKey = @"NWTableViewCellKey";
     NSString * lessonViewControllerName;
     
     NWLesson * lesson;
-    
     lessonName = @"Move TextView With Keyboard";
     lessonDescription = @"Make sure that the textview you're editing doesn't get covered by the keyboard!";
     lessonViewControllerName = @"NWKeyboardMoveTextViewController";
     lesson = [[NWLesson alloc]initWithLessonName:lessonName description:lessonDescription lessonViewControllerName:lessonViewControllerName];
     [mLessonArray addObject:lesson];
+    
+    //we haven't filtered anything so we should just add all the lessons to our filtered lessons array
+    [mFilteredLessonArray addObjectsFromArray:mLessonArray];
     [self.tableView reloadData];
     
+    [self.searchBar setDelegate:self];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self setTitle:@"Lesson Menu"];
+}
+
+#pragma mark UISearchBarDelegate Methods
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    //
+    [mFilteredLessonArray removeAllObjects];
+    //getName is actually the method of lesson just like [lesson getName]
+    if (searchText == nil || searchText.length == 0) {
+        [mFilteredLessonArray addObjectsFromArray:mLessonArray];
+    } else {
+        NSString *queryString = [NSString stringWithFormat:@"getName contains[c] '%@'", searchText];
+        NSPredicate *filterPredicate = [NSPredicate predicateWithFormat:queryString];
+        [mFilteredLessonArray removeAllObjects];
+        [mFilteredLessonArray addObjectsFromArray:[mLessonArray filteredArrayUsingPredicate:filterPredicate]];
+    }
+    
+    //reload the data after filtering
+    [self.tableView reloadData];
+}
 
 
 #pragma mark UITableViewDelegate Methods
@@ -57,6 +89,22 @@ const NSString * NWTableViewCellKey = @"NWTableViewCellKey";
     return 100.0f;
 }
 
+//what happens if we select a cell
+//answer: go to the lesson view controller
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //get the lesson at the index
+    NWLesson * lessonForCell = [mFilteredLessonArray objectAtIndex:indexPath.row];
+
+    //it should be noted that the viewControllerIdentifier is not the class name.
+    //in interface builder you can specify an id for a view controller or view.
+    //make a viewcontroller that matches the identifer given to it in storyboard
+    NSString * viewControllerIdentifier = lessonForCell.getViewControllerName;
+    UIViewController *viewControllerToNavigateTo = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:viewControllerIdentifier];
+    //push the viewControllerToNavigateTo onto the navigation stack. This will allow us to go back to the main menu
+    //later if we want to
+    [viewControllerToNavigateTo setTitle:[lessonForCell getName]];
+    [self.navigationController pushViewController:viewControllerToNavigateTo animated:YES];
+}
 
 #pragma mark UITableViewDataSource Methods
 
@@ -64,7 +112,7 @@ const NSString * NWTableViewCellKey = @"NWTableViewCellKey";
     //we only have one section for now
     //tell it that it has as many rows as we have lessons in the mLessonArray
     if (section == 0) {
-        return mLessonArray.count;
+        return mFilteredLessonArray.count;
     } else {
         return 0;
     }
@@ -72,7 +120,7 @@ const NSString * NWTableViewCellKey = @"NWTableViewCellKey";
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NWLesson * lessonForCell = [mLessonArray objectAtIndex:indexPath.row];
+    NWLesson * lessonForCell = [mFilteredLessonArray objectAtIndex:indexPath.row];
     
     NWMenuTableViewCell * cell = [self.tableView dequeueReusableCellWithIdentifier:NWTableViewCellKey];
     if (cell == nil) {

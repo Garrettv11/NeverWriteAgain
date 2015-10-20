@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NWViewController : UITableViewController 
+@interface NWViewController : UIViewController
 
 @end
 
