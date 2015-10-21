@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NWTabOptionHeaderView">
+        <view contentMode="scaleToFill" restorationIdentifier="NWTabOptionHeaderView" id="iN0-l3-epB" customClass="NWTabOptionHeaderView">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -15,27 +15,35 @@
                     <animations/>
                     <color key="backgroundColor" red="0.88248783349990845" green="0.96020287275314331" blue="0.97438710927963257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbq-xc-Lbv" userLabel="Option 2 Button">
-                    <rect key="frame" x="200" y="0.0" width="200" height="30"/>
-                    <animations/>
-                    <state key="normal" title="Button"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfO-Ng-z3Q" userLabel="Option 3 Button">
-                    <rect key="frame" x="400" y="0.0" width="200" height="30"/>
-                    <animations/>
-                    <state key="normal" title="Button"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygb-QG-9rI" userLabel="Option 1 Button">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygb-QG-9rI" userLabel="Option A Button">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Uar-m4-q29"/>
                     </constraints>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="optionAPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="L2i-FU-eAr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbq-xc-Lbv" userLabel="Option B Button">
+                    <rect key="frame" x="200" y="0.0" width="200" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="optionBPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="iqn-Xv-pPP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfO-Ng-z3Q" userLabel="Option C Button">
+                    <rect key="frame" x="400" y="0.0" width="200" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="optionCPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="rBU-bL-uSa"/>
+                    </connections>
                 </button>
             </subviews>
             <animations/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="ygb-QG-9rI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2v5-mF-0Cy"/>
                 <constraint firstItem="xfO-Ng-z3Q" firstAttribute="height" secondItem="ygb-QG-9rI" secondAttribute="height" id="5q9-G6-Aqp"/>
@@ -53,6 +61,12 @@
                 <constraint firstItem="qbq-xc-Lbv" firstAttribute="width" secondItem="ygb-QG-9rI" secondAttribute="width" id="sua-Qn-92u"/>
                 <constraint firstItem="BDT-KG-cYt" firstAttribute="centerY" secondItem="ygb-QG-9rI" secondAttribute="centerY" id="vNc-yR-SjR"/>
             </constraints>
+            <connections>
+                <outlet property="leadingSliderViewConstraint" destination="8x6-oA-Z2v" id="Qdc-Fg-W5B"/>
+                <outlet property="optionAButton" destination="ygb-QG-9rI" id="oEE-IE-7WW"/>
+                <outlet property="optionBButton" destination="qbq-xc-Lbv" id="tvv-LW-Ijx"/>
+                <outlet property="optionCButton" destination="xfO-Ng-z3Q" id="yc7-oC-Agd"/>
+            </connections>
         </view>
     </objects>
 </document>
