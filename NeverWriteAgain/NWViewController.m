@@ -45,6 +45,13 @@ const NSString * NWTableViewCellKey = @"NWTableViewCellKey";
     NSString * lessonViewControllerName;
     
     NWLesson * lesson;
+    
+    lessonName = @"Delegates and Delegate Methods";
+    lessonDescription = @"Learn how to make a reusable view that can tell its delegate what's happening to it.";
+    lessonViewControllerName = @"NWLetterColorViewController";
+    lesson = [[NWLesson alloc]initWithLessonName:lessonName description:lessonDescription lessonViewControllerName:lessonViewControllerName];
+    [mLessonArray addObject:lesson];
+    
     lessonName = @"Move TextView With Keyboard";
     lessonDescription = @"Make sure that the textview you're editing doesn't get covered by the keyboard!";
     lessonViewControllerName = @"NWKeyboardMoveTextViewController";

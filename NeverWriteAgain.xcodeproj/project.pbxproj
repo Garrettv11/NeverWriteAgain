@@ -19,6 +19,9 @@
 		612136281BD448BC00DCE206 /* NWLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 612136271BD448BC00DCE206 /* NWLesson.m */; settings = {ASSET_TAGS = (); }; };
 		619105971BD4A0A000A3A095 /* NWMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 619105951BD4A0A000A3A095 /* NWMenuTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		619105981BD4A0A000A3A095 /* NWMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619105961BD4A0A000A3A095 /* NWMenuTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		619105A01BD6AD2900A3A095 /* NWTabOptionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6191059F1BD6AD2900A3A095 /* NWTabOptionHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		619105A21BD6AD4400A3A095 /* NWTabOptionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619105A11BD6AD4400A3A095 /* NWTabOptionHeaderView.xib */; settings = {ASSET_TAGS = (); }; };
+		619105A61BD75F5B00A3A095 /* NWLetterColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 619105A41BD75F5B00A3A095 /* NWLetterColorViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,11 @@
 		619105941BD4A0A000A3A095 /* NWMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWMenuTableViewCell.h; sourceTree = "<group>"; };
 		619105951BD4A0A000A3A095 /* NWMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWMenuTableViewCell.m; sourceTree = "<group>"; };
 		619105961BD4A0A000A3A095 /* NWMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWMenuTableViewCell.xib; sourceTree = "<group>"; };
+		6191059E1BD6AD2900A3A095 /* NWTabOptionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWTabOptionHeaderView.h; sourceTree = "<group>"; };
+		6191059F1BD6AD2900A3A095 /* NWTabOptionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWTabOptionHeaderView.m; sourceTree = "<group>"; };
+		619105A11BD6AD4400A3A095 /* NWTabOptionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWTabOptionHeaderView.xib; sourceTree = "<group>"; };
+		619105A31BD75F5B00A3A095 /* NWLetterColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWLetterColorViewController.h; sourceTree = "<group>"; };
+		619105A41BD75F5B00A3A095 /* NWLetterColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWLetterColorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +186,11 @@
 		6191059A1BD61B3900A3A095 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				6191059E1BD6AD2900A3A095 /* NWTabOptionHeaderView.h */,
+				6191059F1BD6AD2900A3A095 /* NWTabOptionHeaderView.m */,
+				619105A11BD6AD4400A3A095 /* NWTabOptionHeaderView.xib */,
+				619105A31BD75F5B00A3A095 /* NWLetterColorViewController.h */,
+				619105A41BD75F5B00A3A095 /* NWLetterColorViewController.m */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
@@ -289,6 +302,7 @@
 				619105981BD4A0A000A3A095 /* NWMenuTableViewCell.xib in Resources */,
 				612135FB1BD4417F00DCE206 /* Assets.xcassets in Resources */,
 				612135F91BD4417F00DCE206 /* Main.storyboard in Resources */,
+				619105A21BD6AD4400A3A095 /* NWTabOptionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,8 +327,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619105A01BD6AD2900A3A095 /* NWTabOptionHeaderView.m in Sources */,
 				612136241BD446FD00DCE206 /* NWKeyboardMoveTextViewController.m in Sources */,
 				612135F61BD4417F00DCE206 /* NWViewController.m in Sources */,
+				619105A61BD75F5B00A3A095 /* NWLetterColorViewController.m in Sources */,
 				612136281BD448BC00DCE206 /* NWLesson.m in Sources */,
 				612135F31BD4417F00DCE206 /* NWAppDelegate.m in Sources */,
 				612135F01BD4417F00DCE206 /* main.m in Sources */,
