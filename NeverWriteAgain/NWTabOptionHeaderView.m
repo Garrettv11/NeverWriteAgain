@@ -15,6 +15,7 @@
     IBOutlet UIButton *optionAButton;
     IBOutlet UIButton *optionBButton;
     IBOutlet UIButton *optionCButton;
+    IBOutlet UIView *sliderView;
 }
 
 @end
@@ -51,6 +52,10 @@
     }
     //animate for half a second
     [UIView animateWithDuration:0.5f animations:^{
+        CGRect newSliderViewRect = sliderView.frame;
+        newSliderViewRect.origin.x = sliderViewOffset;
+        [sliderView setFrame:newSliderViewRect];
+    } completion:^(BOOL finished) {
         [leadingSliderViewConstraint setConstant:sliderViewOffset];
     }];
     

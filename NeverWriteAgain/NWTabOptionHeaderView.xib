@@ -21,7 +21,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Uar-m4-q29"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="A"/>
                     <connections>
                         <action selector="optionAPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="L2i-FU-eAr"/>
                     </connections>
@@ -29,7 +29,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbq-xc-Lbv" userLabel="Option B Button">
                     <rect key="frame" x="200" y="0.0" width="200" height="30"/>
                     <animations/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="B"/>
                     <connections>
                         <action selector="optionBPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="iqn-Xv-pPP"/>
                     </connections>
@@ -37,7 +37,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfO-Ng-z3Q" userLabel="Option C Button">
                     <rect key="frame" x="400" y="0.0" width="200" height="30"/>
                     <animations/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="C"/>
                     <connections>
                         <action selector="optionCPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="rBU-bL-uSa"/>
                     </connections>
@@ -66,6 +66,7 @@
                 <outlet property="optionAButton" destination="ygb-QG-9rI" id="oEE-IE-7WW"/>
                 <outlet property="optionBButton" destination="qbq-xc-Lbv" id="tvv-LW-Ijx"/>
                 <outlet property="optionCButton" destination="xfO-Ng-z3Q" id="yc7-oC-Agd"/>
+                <outlet property="sliderView" destination="BDT-KG-cYt" id="OFr-Qh-bI6"/>
             </connections>
         </view>
     </objects>
