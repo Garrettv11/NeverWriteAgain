@@ -10,7 +10,7 @@
 #import "NWLesson.h"
 #import "NWMenuTableViewCell.h"
 
-const NSString * NWTableViewCellKey = @"NWTableViewCellKey";
+NSString * const NWTableViewCellKey = @"NWTableViewCellKey";
 
 @interface NWViewController ()<UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet
